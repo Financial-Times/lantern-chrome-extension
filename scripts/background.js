@@ -1,4 +1,4 @@
-// Only add the extension to the ft.com site
+// Only add the extension to the ft.com and next.ft.com site
 chrome.runtime.onInstalled.addListener(function() {
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     chrome.declarativeContent.onPageChanged.addRules([{
@@ -6,6 +6,11 @@ chrome.runtime.onInstalled.addListener(function() {
         new chrome.declarativeContent.PageStateMatcher({
           pageUrl: {
             hostEquals: 'www.ft.com'
+          }
+        }),
+        new chrome.declarativeContent.PageStateMatcher({
+          pageUrl: {
+            hostEquals: 'next.ft.com'
           }
         })
       ],

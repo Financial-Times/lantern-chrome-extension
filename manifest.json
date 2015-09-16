@@ -1,7 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Lantern",
-  "version": "1.0",
+  "name": "FT Lantern Analytics",
+  "short_name": "Lantern",
+  "version": "1.1",
   "description": "Conveniently open your page analytics with just one click.",
   "icons": {
     "128": "images/logo_128.png",
@@ -16,12 +17,13 @@
   ],
   "background": {
     "scripts": [ "scripts/background.js" ],
-    "persistent": false
+    "persistent": true
   },
   "content_scripts": [
     {
       "matches": [
-        "http://www.ft.com/*"
+        "*://www.ft.com/*",
+        "*://next.ft.com/*"
       ],
       "js": [
         "scripts/content.js"
