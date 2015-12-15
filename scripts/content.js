@@ -18,7 +18,7 @@ chrome.runtime.onMessage.addListener(
       }
 
       if (uuid) {
-        redirectURL += 'articles/' + uuid;
+        redirectURL += 'landing/article/' + uuid;
       }
 
       // Fire event with new redirect URL as param
